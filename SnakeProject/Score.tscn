@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Font/PoetsenOne-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://Score.gd" type="Script" id=2]
+[ext_resource path="res://Graphics/apple.png" type="Texture" id=3]
+
+[sub_resource type="DynamicFont" id=1]
+font_data = ExtResource( 1 )
+
+[node name="Score" type="Node2D" groups=[
+"ScoreGroup",
+]]
+script = ExtResource( 2 )
+
+[node name="ScoreText" type="Label" parent="."]
+margin_right = 40.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.219608, 0.290196, 0.0470588, 1 )
+text = "0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Apple" type="Sprite" parent="."]
+texture = ExtResource( 3 )
